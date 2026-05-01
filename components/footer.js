@@ -5,8 +5,8 @@ function renderFooter() {
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>About Hospital</h3>
-                    <p>HealthCare Hospital is a leading medical institution providing comprehensive healthcare services with state-of-the-art facilities.</p>
+                    <h3>About MediQueue</h3>
+                    <p>MediQueue is a leading medical institution providing comprehensive healthcare services with state-of-the-art facilities and expert specialists dedicated to patient care.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
@@ -35,7 +35,7 @@ function renderFooter() {
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 HealthCare Hospital. All rights reserved.</p>
+                <p>&copy; 2026 MediQueue Hospital. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -66,4 +66,3 @@ if (document.readyState === 'loading') {
 } else {
     renderFooter();
 }
-

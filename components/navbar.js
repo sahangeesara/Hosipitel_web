@@ -6,7 +6,7 @@ function renderNavbar() {
             <div class="navbar-wrapper">
                 <div class="logo">
                     <i class="fas fa-hospital"></i>
-                    <span>HealthCare Hospital</span>
+                    <span>MediQueue</span>
                 </div>
                 <button class="nav-toggle" id="navToggle">
                     <span></span>
@@ -65,4 +65,3 @@ if (document.readyState === 'loading') {
 } else {
     renderNavbar();
 }
-

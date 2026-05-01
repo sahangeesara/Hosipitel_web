@@ -54,22 +54,6 @@ function renderDepartments() {
     `;
 
     document.getElementById('departments-container').innerHTML = departmentsHTML;
-
-    // Initialize department button events
-    initDepartmentEvents();
-}
-
-function initDepartmentEvents() {
-    const departmentButtons = document.querySelectorAll('.department-card .btn');
-
-    departmentButtons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            e.preventDefault();
-            const departmentName = button.closest('.department-card').querySelector('h3').textContent;
-            scrollToSection('contact');
-            showNotification('success', `Booking appointment for ${departmentName}`);
-        });
-    });
 }
 
 // Render departments when document is ready
@@ -78,4 +62,3 @@ if (document.readyState === 'loading') {
 } else {
     renderDepartments();
 }
-
