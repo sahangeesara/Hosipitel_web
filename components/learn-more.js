@@ -3,7 +3,7 @@ function renderLearnMore() {
     const modalHTML = `
     <div id="learnMoreModal" class="modal" style="display: none;">
         <div class="modal-content">
-            <span class="modal-close" id="learnMoreClose">&times;</span>
+                <span class="modal-close" id="learnMoreModalClose">&times;</span>
             <div id="modalBody"></div>
         </div>
     </div>
@@ -18,11 +18,10 @@ function renderLearnMore() {
 
 function initLearnMoreModal() {
     const modal = document.getElementById('learnMoreModal');
-    const closeBtn = document.getElementById('learnMoreClose');
+    const closeBtn = document.getElementById('learnMoreModalClose');
 
     if (closeBtn) {
-        closeBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
+        closeBtn.addEventListener('click', () => {
             modal.style.display = 'none';
         });
     }
@@ -34,7 +33,7 @@ function initLearnMoreModal() {
     });
 
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal && modal.style.display !== 'none') {
+        if (e.key === 'Escape' && modal.style.display !== 'none') {
             modal.style.display = 'none';
         }
     });
