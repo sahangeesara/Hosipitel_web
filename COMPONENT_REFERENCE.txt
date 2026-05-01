@@ -1,0 +1,527 @@
+/* ============================================
+   COMPONENT REFERENCE GUIDE
+   ============================================ */
+
+This file serves as a quick reference for all components in the hospital website.
+
+═══════════════════════════════════════════════════════════════════════════════
+
+1. NAVBAR COMPONENT (components/navbar.js)
+───────────────────────────────────────────────────────────────────────────────
+
+PURPOSE:
+  Display responsive navigation bar with mobile menu
+
+FUNCTIONS:
+  • renderNavbar()      - Renders the navigation HTML
+  • initNavbarEvents()  - Sets up event listeners
+
+FEATURES:
+  ✓ Sticky navigation
+  ✓ Logo with icon
+  ✓ Desktop menu
+  ✓ Mobile hamburger menu
+  ✓ Smooth animations
+  ✓ Keyboard navigation (ESC to close)
+
+CONTAINER ID: navbar-container
+
+HTML STRUCTURE:
+  <nav class="navbar">
+    <logo></logo>
+    <nav-toggle></nav-toggle>
+    <nav-menu></nav-menu>
+  </nav>
+
+EVENT LISTENERS:
+  ✓ Click on menu toggle
+  ✓ Click on nav links
+  ✓ Keydown ESC key
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+2. HERO COMPONENT (components/hero.js)
+───────────────────────────────────────────────────────────────────────────────
+
+PURPOSE:
+  Display impressive hero banner with call-to-action
+
+FUNCTIONS:
+  • renderHero() - Renders the hero section HTML
+
+FEATURES:
+  ✓ Gradient background
+  ✓ Large heading
+  ✓ Subtitle text
+  ✓ Call-to-action button
+  ✓ Fade-in animations
+
+CONTAINER ID: hero-container
+
+HTML STRUCTURE:
+  <section class="hero">
+    <h1>Welcome heading</h1>
+    <p>Subtitle text</p>
+    <button>Call to action</button>
+  </section>
+
+EVENT LISTENERS:
+  ✓ Button click triggers scrollToSection()
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+3. STATS COMPONENT (components/stats.js)
+───────────────────────────────────────────────────────────────────────────────
+
+PURPOSE:
+  Display hospital statistics with animated counters
+
+FUNCTIONS:
+  • renderStats()         - Renders the stats HTML
+  • initStatsAnimation()  - Sets up counter animations
+  • animateCounter()      - Animates individual counter
+
+FEATURES:
+  ✓ 4 statistics cards
+  ✓ Icons for each stat
+  ✓ Animated counters
+  ✓ Scroll-triggered animation
+  ✓ Smooth number transitions
+
+CONTAINER ID: stats-container
+
+DATA DISPLAYED:
+  • Experienced Doctors: 150+
+  • Patients Treated: 50,000+
+  • Hospital Beds: 500+
+  • Years of Excellence: 25+
+
+EVENT LISTENERS:
+  ✓ Intersection Observer for scroll animation
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+4. SERVICES COMPONENT (components/services.js)
+───────────────────────────────────────────────────────────────────────────────
+
+PURPOSE:
+  Showcase medical services offered by hospital
+
+FUNCTIONS:
+  • renderServices()        - Renders services grid
+  • initServiceCardEvents() - Sets up hover effects
+
+DATA STRUCTURE:
+  servicesData = [
+    {
+      icon: 'fa-heart',
+      title: 'Cardiology',
+      description: 'Advanced heart care...'
+    },
+    // ... more services
+  ]
+
+FEATURES:
+  ✓ 6 medical services
+  ✓ Service icons
+  ✓ Descriptions
+  ✓ Hover effects
+  ✓ Responsive grid
+
+SERVICES PROVIDED:
+  1. Cardiology
+  2. Neurology
+  3. Pulmonology
+  4. Orthopedics
+  5. Ophthalmology
+  6. Dentistry
+
+CONTAINER ID: services-container
+
+EVENT LISTENERS:
+  ✓ Mouseenter for hover background
+  ✓ Mouseleave to restore background
+
+HOW TO ADD SERVICE:
+  1. Edit servicesData array
+  2. Add new object with:
+     - icon (Font Awesome class)
+     - title (Service name)
+     - description (Short text)
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+5. DOCTORS COMPONENT (components/doctors.js)
+───────────────────────────────────────────────────────────────────────────────
+
+PURPOSE:
+  Display hospital doctors and their profiles
+
+FUNCTIONS:
+  • renderDoctors() - Renders doctor profiles
+
+DATA STRUCTURE:
+  doctorsData = [
+    {
+      name: 'Dr. James Wilson',
+      specialty: 'Cardiologist',
+      experience: '15+ years experience'
+    },
+    // ... more doctors
+  ]
+
+FEATURES:
+  ✓ Doctor cards
+  ✓ Names and specialties
+  ✓ Experience information
+  ✓ Social media links
+  ✓ Hover animations
+
+DOCTORS INCLUDED:
+  1. Dr. James Wilson (Cardiologist, 15+ years)
+  2. Dr. Sarah Ahmed (Neurologist, 12+ years)
+  3. Dr. Michael Chen (Orthopedic Surgeon, 18+ years)
+  4. Dr. Emily Rodriguez (General Physician, 10+ years)
+
+CONTAINER ID: doctors-container
+
+SOCIAL LINKS:
+  ✓ Facebook
+  ✓ Twitter
+  ✓ LinkedIn
+
+HOW TO ADD DOCTOR:
+  1. Edit doctorsData array
+  2. Add new object with:
+     - name (Doctor name)
+     - specialty (Medical specialty)
+     - experience (Years of experience)
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+6. DEPARTMENTS COMPONENT (components/departments.js)
+───────────────────────────────────────────────────────────────────────────────
+
+PURPOSE:
+  List hospital departments with descriptions
+
+FUNCTIONS:
+  • renderDepartments()   - Renders departments
+  • initDepartmentEvents() - Sets up button handlers
+
+DATA STRUCTURE:
+  departmentsData = [
+    {
+      icon: 'fa-heart',
+      title: 'Cardiology',
+      description: 'State-of-the-art cardiac care...'
+    },
+    // ... more departments
+  ]
+
+FEATURES:
+  ✓ 6 department cards
+  ✓ Department icons
+  ✓ Descriptions
+  ✓ Learn More buttons
+  ✓ Click-to-book functionality
+
+DEPARTMENTS INCLUDED:
+  1. Cardiology
+  2. Neurology
+  3. Emergency
+  4. Pediatrics
+  5. Laboratory
+  6. Radiology
+
+CONTAINER ID: departments-container
+
+EVENT LISTENERS:
+  ✓ Click on "Learn More" button
+  ✓ Triggers scroll to contact form
+  ✓ Shows notification with department name
+
+HOW TO ADD DEPARTMENT:
+  1. Edit departmentsData array
+  2. Add new object with:
+     - icon (Font Awesome class)
+     - title (Department name)
+     - description (Short description)
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+7. CONTACT COMPONENT (components/contact.js)
+───────────────────────────────────────────────────────────────────────────────
+
+PURPOSE:
+  Provide contact form and hospital contact information
+
+FUNCTIONS:
+  • renderContact()        - Renders contact section
+  • initContactFormEvents() - Sets up form handlers
+  • validateEmail()        - Validates email format
+  • validatePhone()        - Validates phone format
+
+FEATURES:
+  ✓ Contact information display
+  ✓ Address, phone, email, hours
+  ✓ Contact form with validation
+  ✓ Email validation
+  ✓ Phone validation
+  ✓ Error highlighting
+  ✓ Success notifications
+
+CONTACT INFORMATION:
+  • Address: 123 Medical Street, Health City, HC 12345
+  • Phone: +1 (555) 123-4567
+  • Email: info@healthcarehospital.com
+  • Hours: 24/7 Emergency, OPD 9 AM - 6 PM (Mon-Sat)
+
+FORM FIELDS:
+  ✓ Name (text input, required)
+  ✓ Email (email input, validated, required)
+  ✓ Phone (tel input, validated, required)
+  ✓ Department (dropdown, required)
+  ✓ Message (textarea, required)
+
+CONTAINER ID: contact-container
+
+VALIDATION RULES:
+  Email: Must contain @ and . (regex validation)
+  Phone: Must be 10+ digits with allowed special chars
+
+EVENT LISTENERS:
+  ✓ Form submit
+  ✓ Input blur (validation)
+  ✓ Input event (clear error state)
+
+HOW TO CHANGE CONTACT INFO:
+  1. Edit renderContact() function
+  2. Update text in the HTML string
+  3. Change address, phone, email, hours
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+8. FOOTER COMPONENT (components/footer.js)
+───────────────────────────────────────────────────────────────────────────────
+
+PURPOSE:
+  Display footer with links, social media, and newsletter signup
+
+FUNCTIONS:
+  • renderFooter()    - Renders footer HTML
+  • initFooterEvents() - Sets up footer event listeners
+
+FEATURES:
+  ✓ About section
+  ✓ Quick links
+  ✓ Social media icons
+  ✓ Newsletter subscription
+  ✓ Copyright information
+
+FOOTER SECTIONS:
+  1. About Hospital
+  2. Quick Links
+  3. Follow Us (Social Media)
+  4. Newsletter Subscription
+
+SOCIAL LINKS:
+  ✓ Facebook
+  ✓ Twitter
+  ✓ Instagram
+  ✓ LinkedIn
+
+QUICK LINKS:
+  ✓ Services
+  ✓ Doctors
+  ✓ Departments
+  ✓ Contact
+
+CONTAINER ID: footer-container
+
+EVENT LISTENERS:
+  ✓ Newsletter form submit
+  ✓ Shows success notification
+
+HOW TO ADD LINK:
+  1. Edit renderFooter() function
+  2. Add new <li><a href="">Link</a></li>
+  3. Update the links section
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+GLOBAL UTILITIES (js/app.js)
+───────────────────────────────────────────────────────────────────────────────
+
+PURPOSE:
+  Provide global functionality used by all components
+
+FUNCTIONS:
+
+scrollToSection(sectionId)
+  • Smoothly scrolls to any section by ID
+  • Used by navigation and buttons
+  • Example: scrollToSection('contact')
+
+showNotification(type, message)
+  • Displays toast notification
+  • Types: 'success' or 'error'
+  • Auto-hides after 3 seconds
+  • Example: showNotification('success', 'Message sent!')
+
+addNotificationStyles()
+  • Adds CSS for notifications
+  • Called automatically by showNotification()
+
+initScrollAnimations()
+  • Sets up Intersection Observer
+  • Animates elements when they scroll into view
+  • Targets: service-card, doctor-card, department-card, stat-item
+
+initActiveNavigation()
+  • Highlights active nav link based on scroll position
+  • Updates on scroll event
+
+addActiveLinkStyles()
+  • Adds CSS for active nav link
+
+createBackToTopButton()
+  • Creates floating "back to top" button
+  • Shows when scrolled past 300px
+  • Smooth scroll to top on click
+  • Hover effects
+
+INITIALIZATION:
+  All global functions called in initializeApp()
+  Called when DOM is ready
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+CSS STYLING (css/styles.css)
+───────────────────────────────────────────────────────────────────────────────
+
+VARIABLES:
+  --primary-color: #0066cc         (Main blue)
+  --secondary-color: #ff6b6b       (Accent red)
+  --dark-color: #1a1a1a            (Dark text)
+  --light-color: #f5f5f5           (Light background)
+  --white-color: #ffffff           (White)
+  --text-color: #333333            (Text)
+  --border-color: #e0e0e0          (Borders)
+  --shadow: 0 2px 15px rgba...    (Drop shadow)
+  --transition: all 0.3s ease      (Animations)
+
+SECTIONS:
+  1. Variables & General
+  2. Navigation Bar
+  3. Hero Section
+  4. Buttons
+  5. Stats Section
+  6. Section Titles
+  7. Services Section
+  8. Doctors Section
+  9. Departments Section
+  10. Contact Section
+  11. Footer
+  12. Animations
+  13. Responsive Design
+
+RESPONSIVE BREAKPOINTS:
+  • @media (max-width: 1024px)  - Tablet
+  • @media (max-width: 768px)   - Mobile
+  • @media (max-width: 576px)   - Extra small
+  • @media print                - Print styles
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+HOW COMPONENTS WORK TOGETHER
+───────────────────────────────────────────────────────────────────────────────
+
+1. PAGE LOADS
+   └─ index.html loaded in browser
+   └─ CSS applied
+   └─ Font Awesome CDN loaded
+
+2. COMPONENTS RENDER
+   └─ Each component JS file executed
+   └─ renderFunction() called
+   └─ HTML inserted into container div
+   └─ DOM elements created
+
+3. COMPONENTS INITIALIZE
+   └─ Each component's init function called
+   └─ Event listeners attached
+   └─ Animations configured
+
+4. APP.JS INITIALIZES
+   └─ Global functionality set up
+   └─ Scroll animations
+   └─ Navigation highlighting
+   └─ Back-to-top button
+
+5. WEBSITE READY
+   └─ All features functional
+   └─ User can interact
+   └─ Animations work
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+CUSTOMIZATION QUICK REFERENCE
+───────────────────────────────────────────────────────────────────────────────
+
+CHANGE COLORS:
+  File: css/styles.css
+  Find: :root { ... }
+  Edit: --primary-color, --secondary-color values
+
+ADD SERVICE:
+  File: components/services.js
+  Find: const servicesData = [...]
+  Action: Add object to array
+
+ADD DOCTOR:
+  File: components/doctors.js
+  Find: const doctorsData = [...]
+  Action: Add object to array
+
+MODIFY CONTACT:
+  File: components/contact.js
+  Find: Contact info in HTML string
+  Action: Edit text values
+
+CHANGE DEPARTMENT:
+  File: components/departments.js
+  Find: const departmentsData = [...]
+  Action: Edit objects in array
+
+UPDATE LINKS:
+  File: components/footer.js
+  Find: Quick Links section
+  Action: Edit href and text
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+This component-based architecture ensures:
+
+✅ Code Organization - Clear file structure
+✅ Maintainability - Easy to find and modify code
+✅ Scalability - Simple to add new components
+✅ Reusability - Components can be used in other projects
+✅ Testing - Components can be tested independently
+✅ Performance - Only loads what's needed
+✅ Accessibility - Clean semantic HTML
+
+═══════════════════════════════════════════════════════════════════════════════
+
